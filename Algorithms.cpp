@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 
+#include "QuickFindUF.h"
+
 using namespace std;
 
 int main()
@@ -17,12 +19,18 @@ int main()
 
 		getline(inFile, line);
 		n = stoi(line);
+		QuickFindUF quickFindUF(n);
 
 		while (getline(inFile, line))
 		{
 			p = stoi(line.substr(0, line.find(" ")));
 			line.erase(0, line.find(" "));
 			q = stoi(line);
+
+			if (!quickFindUF.isConnected(p, q))
+			{
+				quickFindUF.connect(p, q);
+			}
 		}
 		inFile.close();
 	}
