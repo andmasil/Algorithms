@@ -26,9 +26,9 @@ QuickFindUF::~QuickFindUF()
 
 void QuickFindUF::connect(int p, int q)
 {
-	cout << "union " << p << " - " << q << endl;
+	cout << "QuickFind connect " << p << " - " << q << endl;
 
-	if ((p < m_count) && (q < m_count))
+	if (!isConnected(p, q) && (p < m_count) && (q < m_count))
 	{
 		int pid = m_idArray[p];
 		int qid = m_idArray[q];
@@ -54,7 +54,7 @@ bool QuickFindUF::isConnected(int p, int q)
 		result = true;
 	}
 
-	cout << "isConnected (" << p << " - " << q << ") = " << boolalpha << result << endl;
+	cout << "QuickFind isConnected (" << p << " - " << q << ") = " << boolalpha << result << endl;
 	return result;
 }
 

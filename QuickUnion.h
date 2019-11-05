@@ -1,9 +1,9 @@
 #pragma once
-class QuickFindUF
+class QuickUnion
 {
 public:
-	QuickFindUF(int N);
-	~QuickFindUF();
+	QuickUnion(int N);
+	~QuickUnion();
 
 	void connect(int p, int q);
 	bool isConnected(int p, int q);
@@ -11,6 +11,7 @@ public:
 
 private:
 	void printArray();
+	int getRoot(int i);
 
 	int m_count;
 	int* m_idArray;

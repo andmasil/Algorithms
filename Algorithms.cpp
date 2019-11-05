@@ -4,6 +4,7 @@
 #include <string>
 
 #include "QuickFindUF.h"
+#include "QuickUnion.h"
 
 using namespace std;
 
@@ -20,17 +21,15 @@ int main()
 		getline(inFile, line);
 		n = stoi(line);
 		QuickFindUF quickFindUF(n);
+		QuickUnion quickUnionUF(n);
 
 		while (getline(inFile, line))
 		{
 			p = stoi(line.substr(0, line.find(" ")));
 			line.erase(0, line.find(" "));
 			q = stoi(line);
-
-			if (!quickFindUF.isConnected(p, q))
-			{
-				quickFindUF.connect(p, q);
-			}
+			quickFindUF.connect(p, q);
+			quickUnionUF.connect(p, q);
 		}
 		inFile.close();
 	}

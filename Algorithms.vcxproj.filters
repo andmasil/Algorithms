@@ -21,6 +21,9 @@
     <ClCompile Include="QuickFindUF.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QuickUnion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="tinyUF.txt">
@@ -29,6 +32,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="QuickFindUF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickUnion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
