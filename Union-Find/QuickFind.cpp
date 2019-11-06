@@ -1,4 +1,4 @@
-#include "QuickFindUF.h"
+#include "QuickFind.h"
 #include <iostream>
 #include <string>
 
@@ -6,25 +6,12 @@ using namespace std;
 
 const bool PRINT = true;
 
-QuickFindUF::QuickFindUF(int N)
+QuickFind::QuickFind(int N) : UnionFindBase(N)
 {
 	cout << "QuickFindUF " << N << endl << endl;
-	m_count = N;
-	m_idArray = new int[m_count];
-
-	//fill array with uniqe ids
-	for (int i = 0; i < m_count; ++i)
-	{
-		m_idArray[i] = i;
-	}
 }
 
-QuickFindUF::~QuickFindUF()
-{
-	delete[] m_idArray;
-}
-
-void QuickFindUF::connect(int p, int q)
+void QuickFind::connect(int p, int q)
 {
 	cout << "QuickFind connect " << p << " - " << q << endl;
 
@@ -42,10 +29,10 @@ void QuickFindUF::connect(int p, int q)
 			}
 		}
 	}
-	printArray();
+	printArray(PRINT);
 }
 
-bool QuickFindUF::isConnected(int p, int q)
+bool QuickFind::isConnected(int p, int q)
 {
 	bool result = false;
 
@@ -58,25 +45,17 @@ bool QuickFindUF::isConnected(int p, int q)
 	return result;
 }
 
-int QuickFindUF::count()
-{
-	return m_count;
-}
+/* EXAMPLE
+10
+3 4
+3 8
+6 5
+9 4
+2 1
+8 9
+5 0
+7 2
+6 1
 
-void QuickFindUF::printArray()
-{
-	if (PRINT)
-	{
-		string header = "", ids = "";
-
-		header.append("Header |");
-		ids.append("ID     |");
-		for (int i = 0; i < m_count; ++i)
-		{
-			header.append(to_string(i) + "|");
-			ids.append(to_string(m_idArray[i]) + "|");
-		}
-
-		cout << header << endl  << ids <<  endl << endl;
-	}
-}
+ID - 1 1 1 8 8 1 1 1 8 8
+*/

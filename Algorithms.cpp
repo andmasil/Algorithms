@@ -3,14 +3,14 @@
 #include <iostream>
 #include <string>
 
-#include "QuickFindUF.h"
-#include "QuickUnion.h"
+#include "Union-Find/QuickFind.h"
+#include "Union-Find/QuickUnion.h"
 
 using namespace std;
 
 int main()
 {
-	ifstream inFile("tinyUF.txt", ifstream::in);
+	ifstream inFile("Union-Find/tinyUF.txt", ifstream::in);
 	int p = 0, q = 0, n = 0;
 	string line;
 
@@ -20,7 +20,7 @@ int main()
 
 		getline(inFile, line);
 		n = stoi(line);
-		QuickFindUF quickFindUF(n);
+		QuickFind quickFindUF(n);
 		QuickUnion quickUnionUF(n);
 
 		while (getline(inFile, line))

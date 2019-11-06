@@ -18,10 +18,13 @@
     <ClCompile Include="Algorithms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="QuickFindUF.cpp">
+    <ClCompile Include="Union-Find/QuickUnion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="QuickUnion.cpp">
+    <ClCompile Include="Union-Find/QuickFind.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Union-Find/UnionFindBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -31,10 +34,13 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="QuickFindUF.h">
+    <ClInclude Include="Union-Find/QuickUnion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="QuickUnion.h">
+    <ClInclude Include="Union-Find/QuickFind.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Union-Find/UnionFindBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

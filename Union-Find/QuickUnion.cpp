@@ -6,22 +6,9 @@ using namespace std;
 
 const bool PRINT = true;
 
-QuickUnion::QuickUnion(int N)
+QuickUnion::QuickUnion(int N) : UnionFindBase(N)
 {
 	cout << "QuickUnion " << N << endl << endl;
-	m_count = N;
-	m_idArray = new int[m_count];
-
-	//fill array parent reference
-	for (int i = 0; i < m_count; ++i)
-	{
-		m_idArray[i] = i;
-	}
-}
-
-QuickUnion::~QuickUnion()
-{
-	delete[] m_idArray;
 }
 
 void QuickUnion::connect(int p, int q)
@@ -37,7 +24,7 @@ void QuickUnion::connect(int p, int q)
 		{
 			m_idArray[pRoot] = m_idArray[qRoot];
 		}
-		printArray();
+		printArray(PRINT);
 	}
 }
 
@@ -52,29 +39,6 @@ bool QuickUnion::isConnected(int p, int q)
 
 	cout << "QuickUnion isConnected (" << p << " - " << q << ") = " << boolalpha << result << endl;
 	return result;
-}
-
-int QuickUnion::count()
-{
-	return m_count;
-}
-
-void QuickUnion::printArray()
-{
-	if (PRINT)
-	{
-		string header = "", ids = "";
-
-		header.append("Header |");
-		ids.append("ID     |");
-		for (int i = 0; i < m_count; ++i)
-		{
-			header.append(to_string(i) + "|");
-			ids.append(to_string(m_idArray[i]) + "|");
-		}
-
-		cout << header << endl << ids << endl << endl;
-	}
 }
 
 int QuickUnion::getRoot(int i)

@@ -1,19 +1,15 @@
 #pragma once
-class QuickUnion
+#include "UnionFindBase.h"
+
+class QuickUnion : public UnionFindBase
 {
 public:
 	QuickUnion(int N);
-	~QuickUnion();
 
 	void connect(int p, int q);
 	bool isConnected(int p, int q);
-	int count();
 
 private:
-	void printArray();
 	int getRoot(int i);
-
-	int m_count;
-	int* m_idArray;
 };
 

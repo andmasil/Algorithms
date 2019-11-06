@@ -152,15 +152,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Algorithms.cpp" />
-    <ClCompile Include="QuickFindUF.cpp" />
-    <ClCompile Include="QuickUnion.cpp" />
+    <ClCompile Include="Union-Find/QuickFind.cpp" />
+    <ClCompile Include="Union-Find/QuickUnion.cpp" />
+    <ClCompile Include="Union-Find/UnionFindBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="tinyUF.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="QuickFindUF.h" />
-    <ClInclude Include="QuickUnion.h" />
+    <ClInclude Include="Union-Find/QuickFind.h" />
+    <ClInclude Include="Union-Find/QuickUnion.h" />
+    <ClInclude Include="Union-Find/UnionFindBase.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
