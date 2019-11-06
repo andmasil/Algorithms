@@ -24,18 +24,18 @@ int UnionFindBase::count()
 	return m_count;
 }
 
-void UnionFindBase::printArray(bool visible)
+void UnionFindBase::printArray(int* array, int size, bool visible)
 {
 	if (visible)
 	{
 		string header = "", ids = "";
 
 		header.append("Header |");
-		ids.append("ID     |");
-		for (int i = 0; i < m_count; ++i)
+		ids.append("Value  |");
+		for (int i = 0; i < size; ++i)
 		{
 			header.append(to_string(i) + "|");
-			ids.append(to_string(m_idArray[i]) + "|");
+			ids.append(to_string(array[i]) + "|");
 		}
 
 		cout << header << endl << ids << endl << endl;

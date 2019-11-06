@@ -1,10 +1,9 @@
 #include "QuickFind.h"
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-const bool PRINT = true;
+const bool PRINT = false;
 
 QuickFind::QuickFind(int N) : UnionFindBase(N)
 {
@@ -29,7 +28,7 @@ void QuickFind::connect(int p, int q)
 			}
 		}
 	}
-	printArray(PRINT);
+	printArray(m_idArray, m_count, PRINT);
 }
 
 bool QuickFind::isConnected(int p, int q)

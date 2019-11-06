@@ -1,10 +1,9 @@
 #include "QuickUnion.h"
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-const bool PRINT = true;
+const bool PRINT = false;
 
 QuickUnion::QuickUnion(int N) : UnionFindBase(N)
 {
@@ -24,7 +23,7 @@ void QuickUnion::connect(int p, int q)
 		{
 			m_idArray[pRoot] = m_idArray[qRoot];
 		}
-		printArray(PRINT);
+		printArray(m_idArray, m_count, PRINT);
 	}
 }
 

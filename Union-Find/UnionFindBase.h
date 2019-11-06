@@ -7,7 +7,7 @@ public:
 
 protected:
 	int count();
-	void printArray(bool visible = true);
+	void printArray(int* array, int size, bool visible = true);
 	int m_count;
 	int* m_idArray;
 };

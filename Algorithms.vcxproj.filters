@@ -13,18 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Union-Find">
+      <UniqueIdentifier>{634b9f23-85dd-4a0c-8f0d-a96d1e598600}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Union-Find">
+      <UniqueIdentifier>{584dd160-3a3f-45ed-a25a-4222d8c81da4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Algorithms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Union-Find/QuickUnion.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Union-Find/QuickFind.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Union-Find</Filter>
+    </ClCompile>
+    <ClCompile Include="Union-Find/QuickUnion.cpp">
+      <Filter>Source Files\Union-Find</Filter>
     </ClCompile>
     <ClCompile Include="Union-Find/UnionFindBase.cpp">
+      <Filter>Source Files\Union-Find</Filter>
+    </ClCompile>
+    <ClCompile Include="Union-Find\WeightedQuickUnion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -34,14 +43,17 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Union-Find/QuickUnion.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Union-Find/QuickFind.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Union-Find</Filter>
+    </ClInclude>
+    <ClInclude Include="Union-Find/QuickUnion.h">
+      <Filter>Header Files\Union-Find</Filter>
     </ClInclude>
     <ClInclude Include="Union-Find/UnionFindBase.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Union-Find</Filter>
+    </ClInclude>
+    <ClInclude Include="Union-Find/WeightedQuickUnion.h">
+      <Filter>Header Files\Union-Find</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

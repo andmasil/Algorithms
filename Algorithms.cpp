@@ -5,6 +5,7 @@
 
 #include "Union-Find/QuickFind.h"
 #include "Union-Find/QuickUnion.h"
+#include "Union-Find/WeightedQuickUnion.h"
 
 using namespace std;
 
@@ -22,6 +23,7 @@ int main()
 		n = stoi(line);
 		QuickFind quickFindUF(n);
 		QuickUnion quickUnionUF(n);
+		WeightedQuickUnion weightedQuickUnion(n);
 
 		while (getline(inFile, line))
 		{
@@ -30,12 +32,14 @@ int main()
 			q = stoi(line);
 			quickFindUF.connect(p, q);
 			quickUnionUF.connect(p, q);
+			weightedQuickUnion.connect(p, q);
 		}
 		inFile.close();
 
 		line.clear();
 		while (line != "q")
 		{
+			cout << "Command: ";
 			getline(cin, line);
 			try 
 			{
@@ -44,6 +48,7 @@ int main()
 				q = stoi(line);
 				quickFindUF.isConnected(p, q);
 				quickUnionUF.isConnected(p, q);
+				weightedQuickUnion.isConnected(p, q);
 			}
 			catch (const std::exception & e) { cout << e.what() << endl; }
 		}
