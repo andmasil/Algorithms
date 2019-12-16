@@ -152,15 +152,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Algorithms.cpp" />
+    <ClCompile Include="Data-Structures\Stack.cpp" />
     <ClCompile Include="Union-Find/QuickFind.cpp" />
     <ClCompile Include="Union-Find/QuickUnion.cpp" />
     <ClCompile Include="Union-Find/UnionFindBase.cpp" />
     <ClCompile Include="Union-Find\WeightedQuickUnion.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Data-Structures\strings.txt" />
     <Text Include="tinyUF.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Data-Structures\Stack.h" />
     <ClInclude Include="Union-Find/QuickFind.h" />
     <ClInclude Include="Union-Find/QuickUnion.h" />
     <ClInclude Include="Union-Find/UnionFindBase.h" />

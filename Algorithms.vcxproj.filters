@@ -19,6 +19,12 @@
     <Filter Include="Header Files\Union-Find">
       <UniqueIdentifier>{584dd160-3a3f-45ed-a25a-4222d8c81da4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Data-Structures">
+      <UniqueIdentifier>{b4199168-140e-45cf-a850-da33cec44574}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data-Structures">
+      <UniqueIdentifier>{a6194a1c-217e-4335-b9bb-f2390664d231}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Algorithms.cpp">
@@ -36,9 +42,15 @@
     <ClCompile Include="Union-Find\WeightedQuickUnion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Data-Structures\Stack.cpp">
+      <Filter>Source Files\Data-Structures</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="tinyUF.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Data-Structures\strings.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
@@ -54,6 +66,9 @@
     </ClInclude>
     <ClInclude Include="Union-Find/WeightedQuickUnion.h">
       <Filter>Header Files\Union-Find</Filter>
+    </ClInclude>
+    <ClInclude Include="Data-Structures\Stack.h">
+      <Filter>Header Files\Data-Structures</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

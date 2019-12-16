@@ -6,10 +6,41 @@
 #include "Union-Find/QuickFind.h"
 #include "Union-Find/QuickUnion.h"
 #include "Union-Find/WeightedQuickUnion.h"
+#include "Data-Structures/Stack.h"
 
 using namespace std;
 
+void startUnionFind();
+void startDataStructure();
+
 int main()
+{
+	string command;
+
+	while (command != "q")
+	{
+		cout << "1. Union Find\n2. Data Structure" << endl;
+		getline(cin, command);
+
+		try
+		{
+			switch (stoi(command))
+			{
+			case 1:
+				startUnionFind();
+				break;
+			case 2:
+				startDataStructure();
+				break;
+			default:
+				break;
+			}
+		}
+		catch (const std::exception & e) { cout << e.what() << endl; }
+	}	
+}
+
+void startUnionFind()
 {
 	ifstream inFile("Union-Find/tinyUF.txt", ifstream::in);
 	int p = 0, q = 0, n = 0;
@@ -41,7 +72,7 @@ int main()
 		{
 			cout << "Command: ";
 			getline(cin, line);
-			try 
+			try
 			{
 				p = stoi(line.substr(0, line.find(" ")));
 				line.erase(0, line.find(" "));
@@ -53,4 +84,28 @@ int main()
 			catch (const std::exception & e) { cout << e.what() << endl; }
 		}
 	}
+}
+
+void startDataStructure()
+{
+	Stack stack;
+	string word;
+	ifstream inFile("Data-Structures/strings.txt", ifstream::in);
+
+	if (inFile.is_open())
+	{
+		while (inFile >> word)
+		{
+			if (word == "-")
+			{
+				string s = stack.pop();
+			}
+			else
+			{
+				stack.push(word);
+			}
+		}
+		cout << endl;
+	}
+	inFile.close();
 }
